@@ -25,7 +25,7 @@ function findVideos(song){
   gapi.client.youtube.channels
   .list({
     part: 'snipppet,contentDetails,statistics',
-    forUser: song
+    forUsername: song
   })
   .then(response => {
     console.log(response);
