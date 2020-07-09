@@ -18,7 +18,7 @@ function initClient(){
 		scope: SCOPES
 	}).then ( ()  => {
     BUTTON.addEventListener('submit', findVideos(SONGNAME))
-  }
+  })
 
 //Find the videos with the song Name
 function findVideos(song){
