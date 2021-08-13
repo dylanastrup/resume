@@ -4195,6 +4195,9 @@ ol {
 .u-background-effect {
   overflow: hidden;
 }
+.u-background-effect ~ .u-container-layout {
+  cursor: pointer;
+}
 /* Fade effect */
 .u-effect-fade .u-over-slide {
   opacity: 0;
@@ -12764,6 +12767,7 @@ section.u-image,
 .u-header.u-sticky,
 .u-overlap .u-header {
   z-index: 20;
+  padding-top: 0.1px;
 }
 .u-overlap .u-header.u-sticky {
   position: fixed;
@@ -16953,9 +16957,6 @@ div.u-video,
   width: 100%;
   height: 100vh;
   height: -webkit-fill-available;
-}
-.u-menu-overlay:not(.u-opacity) {
-  opacity: 0;
 }
 .u-sidenav-overflow {
   overflow: auto;
