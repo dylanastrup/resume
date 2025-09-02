@@ -1,89 +1,407 @@
-<!DOCTYPE html>
-<html  >
+<!doctype html>
+<html lang="en" class="scroll-smooth">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dylan Astrup — Resume</title>
+  <meta name="description" content="Resume of Dylan Astrup — mechanical engineer and builder. Experience, projects, skills, education, and contact." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta property="og:title" content="Dylan Astrup — Resume" />
+  <meta property="og:description" content="Resume of Dylan Astrup — experience, projects, skills, and contact." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://resume.dylanastrup.com/avatar.png" />
+  <link rel="canonical" href="https://resume.dylanastrup.com/" />
+  <meta name="theme-color" content="#0f172a" />
+
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-20ZYVE461L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-20ZYVE461L"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} gtag('js', new Date());
+    gtag('config', 'G-20ZYVE461L');
+  </script>
 
-  gtag('config', 'G-20ZYVE461L');
-</script>
-  
-  <!-- Site made with Mobirise Website Builder v5.6.0, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.6.0, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/fabicon-128x110.png" type="image/x-icon">
-  <meta name="description" content="^click that to learn more about me">
-  
-  
-  <title>Dylan Astrup</title>
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+  <!-- Prevent theme flash -->
+  <script>
+    (function(){ try {
+      const ls = localStorage.getItem('theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (ls === 'dark' || (!ls && systemDark)) document.documentElement.classList.add('dark');
+    } catch(e){} })();
+  </script>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: {
+        colors: { primary: '#477491' },
+        fontFamily: { sans: ['Plus Jakarta Sans','Inter','system-ui','Segoe UI','Roboto','Helvetica Neue','Arial','Noto Sans','Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','sans-serif'] },
+        boxShadow: { soft: '0 4px 24px rgba(0,0,0,0.08)' },
+        borderRadius: { '2xl': '1.25rem' }
+      } }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --bg1:#477491; --bg2:#5da6c7; --bg3:#3b82f6; --bg4:#22c55e; }
+    .dark { --bg1:#0b1a2a; --bg2:#0f172a; --bg3:#0b3a5b; --bg4:#0f766e; }
+
+    /* Background layers */
+    .bg-anim { position: fixed; inset: 0; z-index: -3; pointer-events: none;
+      background: linear-gradient(120deg, var(--bg1), var(--bg2), var(--bg3), var(--bg4));
+      background-size: 300% 300%; opacity: .16; animation: bgMove 22s ease-in-out infinite; }
+    .bg-wave { position: fixed; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; }
+    .bg-wave .band { position: absolute; left: -20%; width: 140%; height: 22vh; top: 60vh;
+      background: linear-gradient(90deg, hsla(205,70%,65%,.18), hsla(160,70%,55%,.10), hsla(215,70%,55%,.14));
+      filter: blur(30px); opacity: .10; border-radius: 42% 58% 50% 50% / 58% 42% 50% 50%;
+      transform: translate3d(0,0,0) skewX(4deg); animation: waveDrift 30s ease-in-out infinite; }
+
+    @keyframes bgMove { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+    @keyframes waveDrift { 0% { transform: translateX(0) translateY(0) skewX(4deg); } 50% { transform: translateX(-6%) translateY(1vh) skewX(-4deg); } 100% { transform: translateX(0) translateY(0) skewX(4deg); } }
+
+    /* Icons */
+    .icon{width:1rem;height:1rem}.ico{display:inline-flex;align-items:center}
+
+    /* Pills */
+    .pill{display:inline-flex;align-items:center;gap:.35rem;padding:.25rem .55rem;border-radius:9999px;border:1px solid rgba(0,0,0,.08);background:rgba(255,255,255,.6);backdrop-filter:blur(6px)}
+    .dark .pill{border-color:rgba(255,255,255,.08);background:rgba(12,12,12,.45)}
+
+    /* Details (case studies) */
+    details summary::-webkit-details-marker{display:none}
+    details[open] .chev{transform:rotate(90deg)}
+
+    /* Experience spacing */
+    .experience .role + .role { border-top: 1px solid rgba(17,24,39,.08); margin-top: 1rem; padding-top: 1rem; }
+    .dark .experience .role + .role { border-top-color: rgba(255,255,255,.12); }
+    .experience ul { line-height: 1.65; }
+
+    /* Print */
+    @media print {
+      .bg-anim, .bg-wave, #themeToggle, .screen-only { display:none !important; }
+      body { color: #000 !important; background: #fff !important; }
+      a { color: #000; text-decoration: none; }
+      .page { box-shadow: none !important; }
+      .no-break { break-inside: avoid; }
+    }
+  </style>
+
+  <script>
+    const ICONS = {
+      mail: '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+      linkedin: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.96 1.82-1.97 3.75-1.97 4.01 0 4.75 2.64 4.75 6.07V21h-4v-5.34c0-1.27-.02-2.92-1.78-2.92-1.78 0-2.05 1.38-2.05 2.82V21H9z"/></svg>',
+      github: '<svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.85 3.15 8.96 7.52 10.41.55.1.75-.24.75-.53v-1.86c-3.06.66-3.7-1.3-3.7-1.3-.5-1.26-1.22-1.6-1.22-1.6-.99-.68.08-.66.08-.66 1.1.08 1.68 1.13 1.68 1.13.98 1.67 2.57 1.19 3.2.9.1-.71.38-1.19.69-1.47-2.44-.28-5.01-1.22-5.01-5.45 0-1.2.43-2.18 1.13-2.96-.11-.28-.49-1.4.11-2.92 0 0 .92-.3 3.01 1.13A10.4 10.4 0 0 1 12 6.8c.93.01 1.86.13 2.73.37 2.09-1.43 3.01-1.13 3.01-1.13.6 1.52.22 2.64.11 2.92.7.78 1.13 1.76 1.13 2.96 0 4.24-2.58 5.16-5.03 5.44.39.33.74.98.74 1.98v2.94c0 .29.19.63.76.52 4.36-1.45 7.5-5.56 7.5-10.4C23.02 5.24 18.27.5 12 .5Z"/></svg>'
+    };
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "about": {
+      "@type": "Person",
+      "@id": "https://dylanastrup.com/#person",
+      "name": "Dylan Astrup",
+      "url": "https://dylanastrup.com/",
+      "image": "https://resume.dylanastrup.com/avatar.png",
+      "email": "mailto:dylan@dylanastrup.com",
+      "sameAs": [
+        "https://x.com/dylanastrup",
+        "https://www.instagram.com/astrup.jpg/",
+        "https://www.linkedin.com/in/dylanastrup/",
+        "https://github.com/dylanastrup"
+      ]
+    },
+    "url": "https://resume.dylanastrup.com/"
+  }
+  </script>
 </head>
-<body>
-  
-  <section data-bs-version="5.1" class="content4 cid-sFwwcon5zt" id="content4-2">
-    
-    
-    <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="title col-md-12 col-lg-12">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-1">
-                    <strong>Dylan Astrup (me)</strong></h3>
-                
-                
-            </div>
-        </div>
-    </div>
-</section>
+<body class="font-sans min-h-screen bg-white text-gray-900 dark:bg-neutral-950 dark:text-gray-100 antialiased [color-scheme:light] dark:[color-scheme:dark]">
+  <!-- Background -->
+  <div class="bg-anim"></div>
+  <div class="bg-wave"><div class="band"></div></div>
 
-<section data-bs-version="5.1" class="image2 cid-sGzwC3hefK" id="image2-4">
-    
+  <main class="max-w-5xl mx-auto px-6 py-12 relative">
+    <!-- Header -->
+    <header class="flex flex-col items-center text-center gap-4">
+      <img src="avatar.png" alt="Avatar" class="h-24 w-24 rounded-full ring-2 ring-primary/20 shadow-soft object-cover" />
+      <div>
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-tight">Dylan Astrup</h1>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Ventura, CA • <button id="copyEmail" class="underline decoration-primary/40 hover:text-primary">dylan@dylanastrup.com</button> <span id="copyToast" class="ml-2 text-xs text-emerald-600 hidden">Copied!</span></p>
+        <p class="mt-1 text-sm text-gray-700 dark:text-gray-300">Now: refining fixtures at NAVSEA · training for fall paddling races · iterating on my recipe app</p>
+      </div>
+      <nav class="flex flex-wrap items-center justify-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+        <a href="mailto:dylan@dylanastrup.com" class="inline-flex items-center gap-1.5 hover:text-primary"><span class="ico" data-icon="mail"></span><span>Email</span></a>
+        <a href="https://www.linkedin.com/in/dylanastrup/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-primary"><span class="ico" data-icon="linkedin"></span><span>LinkedIn</span></a>
+        <a href="https://github.com/dylanastrup" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 hover:text-primary"><span class="ico" data-icon="github"></span><span>GitHub</span></a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="mt-1 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm bg-white border-gray-300 text-gray-800 shadow-soft hover:bg-gray-50 hover:border-primary/50 hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary/40 dark:bg-neutral-900 dark:border-neutral-700 dark:text-gray-100 dark:hover:bg-neutral-800" title="Toggle light/dark"><span id="themeIcon">🌞</span><span id="themeLabel">Light</span></button>
+        <a href="Dylan_Astrup_Resume.pdf" class="screen-only mt-1 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm bg-white border-gray-300 text-gray-800 shadow-soft hover:bg-gray-50 hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/40 dark:bg-neutral-900 dark:border-neutral-700 dark:text-gray-100 dark:hover:bg-neutral-800" download>Download PDF</a>
+        <button onclick="window.print()" class="screen-only mt-1 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-sm bg-white border-gray-300 text-gray-800 shadow-soft hover:bg-gray-50 hover:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/40 dark:bg-neutral-900 dark:border-neutral-700 dark:text-gray-100 dark:hover:bg-neutral-800">Print</button>
+      </div>
+    </header>
 
-    
+    <!-- Content grid -->
+    <section class="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Main (2/3) -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- About -->
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 shadow-soft">
+          <h2 class="text-lg font-semibold mb-2">About</h2>
+          <p class="text-gray-700 dark:text-gray-300">Mechanical Engineer at NAVSEA in Ventura working on test & evaluation for unmanned surface systems and shipboard networks. I like clean, reliable tools, sustainability/alternative energy, and building things that stand up to real use.</p>
+        </section>
 
-    <div>
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-5">
-                <div class="image-wrapper">
-                    <img src="assets/images/attachment-1628472954-removebg-preview-577x433.png" alt="Dylan Astrup">
-                    
-                </div>
+        <!-- Experience -->
+        <section class="experience rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-soft">
+          <h2 class="text-lg font-semibold mb-4">Experience</h2>
+
+          <div class="role no-break mb-4">
+            <div class="flex items-baseline justify-between gap-2 flex-wrap">
+              <h3 class="font-medium">Mechanical Engineer — NAVSEA (TSRCN / SDTS)</h3>
+              <span class="text-xs text-gray-600 dark:text-gray-400">Ventura, CA · <span class="whitespace-nowrap">Jun 2024–Present</span></span>
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="text-wrapper">
-                    
-                    <p class="mbr-text mbr-fonts-style display-7">I lived in California
-<br>I moved to Arizona for school<br>I now live in California, again<br>I like to be outdoors surfing, hiking, skiing...
-<br>I like playing with cool technology, hence the homebuilt website
-<br>I went to highschool at <a href="https://www.ocsarts.net/" class="text-primary" target="_blank">OCSA
-</a><br>I studied Culinary Arts &amp; Hospitality there<br>I was a camp counselor every summer during high school
-<br>I also started as a Quality Control intern at a food manufacturer
-<br>I have become a hot sauce snob because of that role<br>I studied Mechanical Engineering at <a href="https://prescott.erau.edu/" class="text-primary" target="_blank">ERAU&nbsp;Prescott</a><br>I had a focus in Alternative Energy<br>I was the co-leader on an undergrad research project&nbsp;<br>I was elected to be the Treasurer of ERAU's student government&nbsp;<br>I oversaw a budget of a little over $1 million<br>I was elected to be the Vice President the following year<br>I am a <a href="https://www.smartscholarship.org/smart" class="text-primary" target="_blank">SMART Scholar</a> through the DoD
-<br>I helped deliver cars at <a href="https://www.tesla.com/" class="text-primary" target="_blank">Tesla</a> when I wasn't at school<br>
-I graduated in 2023 with a BS in Mechanical Engineering from ERAU<br>I now work as a Mechanical Engineer for NAVSEA in Port Hueneme, California<br>I enjoy talking about cars and renewable energy
-<br>I also enjoy researching stocks and financial advice
-<br>I have a <a href="https://www.linkedin.com/in/dylanastrup/" class="text-primary" target="_blank">LinkedIn</a> as well as a more formal <a href="assets/files/DylanAstrup_Resume_Website.pdf" class="text-primary" target="_blank">résumé</a> if you want more details
-<br>I can also be contacted at <a href="mailto:dylan@dylanastrup.com" class="text-primary">dylan@dylanastrup.com</a>&nbsp;<br></p>
-                </div>
+            <ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              <li>Own maintenance & operation of the Self Defense Test Ship's remote control network (TSRCN).</li>
+              <li>Designed & installed replacement shore antenna positioners/controllers; maintained ship/shore positioners.</li>
+              <li>Troubleshoot comms issues; support field work (including operating gov-owned construction equipment).</li>
+            </ul>
+          </div>
+
+          <div class="role no-break mb-4">
+            <div class="flex items-baseline justify-between gap-2 flex-wrap">
+              <h3 class="font-medium">Maintenance Engineer — NAVSEA (ICS)</h3>
+              <span class="text-xs text-gray-600 dark:text-gray-400">Ventura, CA · <span class="whitespace-nowrap">Aug 2023–Aug 2025</span></span>
             </div>
-        </div>
-    </div>
-</section><section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;"><a href="https://mobirise.site/s" style="flex: 1 1; height: 0rem; padding-left: 1rem;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/r" style="color:#aaa;"></a></p></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
+            <ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              <li>Led supportability analysis for ICS: Maintenance Philosophy and FMECA using RCM principles.</li>
+              <li>Facilitated cross‑functional working group (10+); mentored interns/new hires in FMECA methods.</li>
+              <li>Helped manage $250K+ task budget; applied Scrum team practices to keep deliverables on track.</li>
+              <li>RCM Level 1 (Backfit) & Level 2 (Classic) certified.</li>
+            </ul>
+          </div>
+
+          <div class="role no-break mb-4">
+            <div class="flex items-baseline justify-between gap-2 flex-wrap">
+              <h3 class="font-medium">SMART Scholar Intern — U.S. Navy (NSWC PHD)</h3>
+              <span class="text-xs text-gray-600 dark:text-gray-400">Port Hueneme, CA · May 2022–Aug 2022</span>
+            </div>
+            <ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              <li>DoD SMART Scholarship internship; supported engineering tasks at NSWC PHD.</li>
+            </ul>
+          </div>
+
+          <div class="role no-break mb-4">
+            <div class="flex items-baseline justify-between gap-2 flex-wrap">
+              <h3 class="font-medium">Seasonal Advisor — Tesla (Sales & Delivery)</h3>
+              <span class="text-xs text-gray-600 dark:text-gray-400">Irvine, CA · Jun 2021–Dec 2021</span>
+            </div>
+            <ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              <li>Part of a record-setting team, delivering 250+ vehicles in a single day out of Costa Mesa.</li>
+              <li>Safely transported vehicles for customer pickup; assisted end-to-end delivery operations.</li>
+              <li>Educated customers 1-on-1 on features and ownership basics.</li>
+            </ul>
+          </div>
+
+          <div class="role no-break mb-2">
+            <div class="flex items-baseline justify-between gap-2 flex-wrap">
+              <h3 class="font-medium">Undergraduate Researcher — Co‑lead (UAV Wildfire Project)</h3>
+              <span class="text-xs text-gray-600 dark:text-gray-400">Prescott, AZ · Sep 2020–Oct 2021</span>
+            </div>
+            <ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              <li>Co‑designed a long‑range endurance UAV for wildfire detection and survey.</li>
+              <li>Experimented with hydrogen fuel cell and solar power sources; supported manufacturing/testing.</li>
+              <li>Funded by ERAU Undergraduate Research Institute.</li>
+            </ul>
+          </div>
+
+          <div class="role no-break">
+            <div class="flex items-baseline justify-between gap-2 flex-wrap">
+              <h3 class="font-medium">Quality Assurance & R&D Intern — Village Green Foods</h3>
+              <span class="text-xs text-gray-600 dark:text-gray-400">Costa Mesa, CA · Jul 2018–Aug 2020</span>
+            </div>
+            <ul class="mt-2 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-2 leading-relaxed">
+              <li>Ran quality tests on 25+ products/batches daily; triaged and managed failed batches.</li>
+              <li>Assisted in R&D for 60+ new recipes; collaborated on trials and documentation.</li>
+              <li>Maintained multiple database systems for inventory, purchasing, and recipes.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Selected Projects -->
+        <section id="projects" class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 shadow-soft">
+          <h2 class="text-lg font-semibold mb-3">Selected Projects</h2>
+
+          <details class="group rounded-xl border border-gray-200 dark:border-neutral-800 p-4">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="min-w-0">
+                <a class="font-medium underline decoration-primary/40 hover:text-primary" href="https://erh2.dylanastrup.com/" target="_blank" rel="noopener">ERH2 — Hydrogen Demonstrator</a>
+                <span class="ml-2 text-xs text-emerald-600">Capstone Lead</span>
+              </div>
+              <span class="chev transition-transform text-gray-500">›</span>
+            </summary>
+            <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+              <p><span class="font-medium">Challenge:</span> Design a hydrogen production & storage demonstrator for the ME department.</p>
+              <p><span class="font-medium">Approach:</span> Led a 6‑person team; alkaline electrolysis unit + storage using lithium‑doped graphitic carbon nitride; integrated thermal sensors.</p>
+              <p><span class="font-medium">Result:</span> Built and tested; retained as a departmental demonstrator.</p>
+            </div>
+          </details>
+
+          <details class="group rounded-xl border border-gray-200 dark:border-neutral-800 p-4 mt-3">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="min-w-0">
+                <a class="font-medium underline decoration-primary/40 hover:text-primary" href="https://recipes.dylanastrup.com/" target="_blank" rel="noopener">Recipe Book</a>
+                <span class="ml-2 text-xs text-emerald-600">Live (Beta)</span>
+              </div>
+              <span class="chev transition-transform text-gray-500">›</span>
+            </summary>
+            <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+              <p>Full‑stack app (React + Flask) for keeping recipes, scaling ingredients, and printing grocery lists.</p>
+            </div>
+          </details>
+
+          <details class="group rounded-xl border border-gray-200 dark:border-neutral-800 p-4 mt-3">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="min-w-0">
+                <a class="font-medium underline decoration-primary/40 hover:text-primary" href="https://photos.dylanastrup.com/" target="_blank" rel="noopener">Photos</a>
+                <span class="ml-2 text-xs text-emerald-600">Live</span>
+              </div>
+              <span class="chev transition-transform text-gray-500">›</span>
+            </summary>
+            <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+              <p>Lightweight galleries and albums; fast rendering and simple navigation.</p>
+            </div>
+          </details>
+
+          <details class="group rounded-xl border border-gray-200 dark:border-neutral-800 p-4 mt-3">
+            <summary class="flex items-center justify-between cursor-pointer">
+              <div class="min-w-0">
+                <a class="font-medium underline decoration-primary/40 hover:text-primary" href="https://blog.dylanastrup.com/" target="_blank" rel="noopener">Blog</a>
+                <span class="ml-2 text-xs text-slate-600">Notes</span>
+              </div>
+              <span class="chev transition-transform text-gray-500">›</span>
+            </summary>
+            <div class="mt-3 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+              <p>Project notes, experiments, and small writeups—mostly for future‑me.</p>
+            </div>
+          </details>
+        </section>
+      </div>
+
+      <!-- Sidebar (1/3) -->
+      <aside class="space-y-6">
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 shadow-soft">
+          <h2 class="text-lg font-semibold mb-2">Toolbox</h2>
+          <div class="text-sm text-gray-700 dark:text-gray-300 leading-6">
+            <div class="flex flex-wrap gap-2">
+              <span class="pill">SolidWorks (Proficient)</span>
+              <span class="pill">Onshape (Beginner)</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">Python</span>
+              <span class="pill">FEA (basic)</span>
+              <span class="pill">GD&T</span>
+              <span class="pill">DFM/DFA</span>
+              <span class="pill">Fixtures</span>
+              <span class="pill">Docs</span>
+              <span class="pill">Excel (Advanced)</span>
+              <span class="pill">Google Suite</span>
+              <span class="pill">RCM (L1/L2)</span>
+              <span class="pill">Scrum</span>
+              <span class="pill">Agile</span>
+              <span class="pill">React</span>
+              <span class="pill">Flask</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 shadow-soft">
+          <h2 class="text-lg font-semibold mb-1">Education</h2>
+          <p class="text-sm text-gray-700 dark:text-gray-300"><span class="font-medium">B.S. Mechanical Engineering</span> — Embry‑Riddle Aeronautical University, Prescott AZ (May 2023)<br><span class="text-xs">Area of Concentration: Alternative Energy</span></p>
+        </section>
+
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-soft">
+          <h2 class="text-lg font-semibold mb-1">Certifications</h2>
+          <ul class="text-sm text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-1.5">
+            <li>Certified SolidWorks Associate (CSWA) & Professional (CSWP)</li>
+            <li>Certified ScrumMaster (CSM)</li>
+            <li>RCM Level 1 (Backfit) & Level 2 (Classic)</li>
+          </ul>
+        </section>
+
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-6 shadow-soft">
+          <h2 class="text-lg font-semibold mb-1">Honors & Awards</h2>
+          <ul class="text-sm text-gray-700 dark:text-gray-300 list-disc pl-5 space-y-1.5">
+            <li>DoD SMART Scholarship (2021–2023)</li>
+            <li>Embry‑Riddle Outstanding Senior (Spring 2023)</li>
+            <li>COE Dean’s List (2019–2023); Presidential Scholarship (2019–2023)</li>
+          </ul>
+        </section>
+
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 shadow-soft">
+          <h2 class="text-lg font-semibold mb-1">Off the clock</h2>
+          <p class="text-sm text-gray-700 dark:text-gray-300">Outrigger paddler and photographer. Outdoors is my reset—hiking, skiing, and salty beach days. If I’m not in the shop, I’m chasing light on the coast or out on the water.</p>
+          <div class="mt-2 flex gap-3 text-sm">
+            <a href="https://photos.dylanastrup.com/" target="_blank" rel="noopener" class="underline decoration-primary/40 hover:text-primary">Photos site →</a>
+            <a href="https://www.instagram.com/astrup.jpg/" target="_blank" rel="noopener" class="underline decoration-primary/40 hover:text-primary">Instagram →</a>
+          </div>
+        </section>
+
+        <section class="rounded-2xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 p-5 shadow-soft">
+          <h2 class="text-lg font-semibold mb-1">Last updated</h2>
+          <p class="text-sm text-gray-700 dark:text-gray-300" id="lastUpdated">September 2025</p>
+        </section>
+      </aside>
+    </section>
+
+    <footer class="mt-10 text-center text-xs text-gray-500 dark:text-gray-400">
+      <p>© <span id="year"></span> Dylan Astrup</p>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const toggle = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    const label = document.getElementById('themeLabel');
+    function applyThemeInfo(){
+      const isDark = document.documentElement.classList.contains('dark');
+      if(icon) icon.textContent = isDark ? '🌙' : '🌞';
+      if(label) label.textContent = isDark ? 'Dark' : 'Light';
+      try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch(e) {}
+    }
+    if (toggle){ toggle.addEventListener('click', () => { document.documentElement.classList.toggle('dark'); applyThemeInfo(); }); applyThemeInfo(); }
+
+    // Copy email with toast
+    const copyBtn = document.getElementById('copyEmail');
+    const toast = document.getElementById('copyToast');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText('dylan@dylanastrup.com');
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 1400);
+        } catch (e) { /* ignore */ }
+      });
+    }
+
+    // Inject icons into nav links
+    document.querySelectorAll('nav a .ico[data-icon]').forEach((el)=>{
+      const key = el.getAttribute('data-icon');
+      if (ICONS[key]) el.innerHTML = ICONS[key];
+    });
+
+    // Keyboard shortcuts: t=theme, p=projects, e=copy email
+    window.addEventListener('keydown', (e) => {
+      if (e.target && (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA')) return;
+      if (e.key === 't') { document.documentElement.classList.toggle('dark'); applyThemeInfo(); }
+      if (e.key === 'p') { const el = document.getElementById('projects'); if (el) el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      if (e.key === 'e') { if (copyBtn) copyBtn.click(); }
+    });
+  </script>
 </body>
 </html>
