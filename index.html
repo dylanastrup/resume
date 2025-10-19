@@ -77,11 +77,38 @@
 
     /* Print */
     @media print {
-      .bg-anim, .bg-wave, #themeToggle, .screen-only { display:none !important; }
-      body { color: #000 !important; background: #fff !important; }
-      a { color: #000; text-decoration: none; }
-      .page { box-shadow: none !important; }
-      .no-break { break-inside: avoid; }
+      /* Hide elements that shouldn't be on the PDF */
+      .screen-only, #themeToggle, header {
+        display: none !important;
+      }
+      
+      /* Reset body styles for clean printing */
+      body {
+        color: #000 !important;
+        background: #fff !important;
+      }
+      
+      /* Ensure the main content starts near the top */
+      main {
+        padding-top: 2rem !important;
+      }
+      
+      /* Remove link styling for a cleaner look */
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+      
+      /* Remove shadows and borders from content cards */
+      .page, section {
+        box-shadow: none !important;
+        border: none !important;
+      }
+      
+      /* Prevent content from breaking awkwardly across pages */
+      .no-break {
+        break-inside: avoid;
+      }
     }
   </style>
 
